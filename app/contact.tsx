@@ -1,6 +1,6 @@
 'use client';
 export function Contact() {
-    async function handleSubmit(e: { preventDefault: () => void; target: { name: { value: any; }; email: { value: any; }; message: { value: any; }; }; }) {
+    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
         const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
